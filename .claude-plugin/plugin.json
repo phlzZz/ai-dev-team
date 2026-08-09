@@ -1,0 +1,9 @@
+{
+  "name": "ai-dev-team",
+  "version": "0.2.1",
+  "description": "A five-agent AI development team — Architect plans, Designer designs, Coder builds, Tester breaks, Manager reviews — plus a dev-team skill that orchestrates them across a feature on an existing project.",
+  "author": {
+    "name": "Phil (Brains & Pixels)"
+  },
+  "keywords": ["agents", "dev-team", "full-stack", "web", "orchestration"]
+}

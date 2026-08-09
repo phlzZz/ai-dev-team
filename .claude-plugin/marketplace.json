@@ -1,0 +1,17 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "ai-dev-team",
+  "description": "A five-agent AI development team for Claude Code — Architect, Designer, Coder, Tester, Manager — plus a skill that runs them as a pipeline.",
+  "owner": {
+    "name": "Phil (Brains & Pixels)"
+  },
+  "plugins": [
+    {
+      "name": "ai-dev-team",
+      "description": "A five-agent AI development team — Architect plans, Designer designs, Coder builds, Tester breaks, Manager reviews — plus a dev-team skill that orchestrates them across a feature on an existing project.",
+      "source": "./",
+      "category": "development",
+      "homepage": "https://github.com/phlzZz/ai-dev-team"
+    }
+  ]
+}
