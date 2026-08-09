@@ -6,7 +6,9 @@ description: >
   properly" request where the user wants the whole team involved rather than a
   one-shot answer. Trigger on "run the dev team on this", "build this with the
   team", "kick off the dev team", "have the team implement X", or "take this
-  feature through architect → designer → coder → tester → manager". For starting
+  feature through architect → designer → coder → tester → manager". Also trigger
+  on the German equivalents: "bau das mit dem Team", "lass das Team ran", "mach
+  das mit dem Dev-Team", "schick das durch das Team". For starting
   a BRAND-NEW project from scratch, bootstrap it first (folder, git, deploy
   target) and then run this skill as the build phase.
 metadata:
