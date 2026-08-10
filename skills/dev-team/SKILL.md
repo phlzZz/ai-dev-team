@@ -6,12 +6,11 @@ description: >
   properly" request where the user wants the whole team involved rather than a
   one-shot answer. Trigger on "run the dev team on this", "build this with the
   team", "kick off the dev team", "have the team implement X", or "take this
-  feature through architect → designer → coder → tester → manager". For starting
-  a BRAND-NEW project from scratch (local folder + GitHub + Vercel + design),
-  use the main `project-setup` skill instead — it bootstraps and deploys first,
-  then runs this same team as its build phase.
+  feature through architect → designer → coder → tester → manager". For a
+  brand-new project, first create a minimal working project, then run this
+  skill as the build phase.
 metadata:
-  version: "0.2.0"
+  version: "0.3.1"
   author: "Phil (Brains & Pixels)"
 ---
 
@@ -29,10 +28,9 @@ Trigger when the user wants the whole team involved on an **existing** project �
 a new feature, a non-trivial change, or a "build this properly" request — rather
 than a one-shot answer. For a tiny tweak, skip the ceremony and just do it.
 
-**New project from scratch?** Use the main `project-setup` skill instead. It
-handles the local folder + GitHub + Vercel bootstrap, gets the project live, runs
-the design-exploration phase, and then invokes this same team as its build phase —
-so you don't run this skill directly for a greenfield project.
+**New project from scratch?** Create a minimal working project first, then use
+this skill as the build phase. This package deliberately owns the development
+workflow only; it does not include a project bootstrapper or deployment setup.
 
 ## The pipeline
 
@@ -74,8 +72,8 @@ scaffold when you're genuinely starting from an empty directory:
 - Confirm the empty skeleton builds/runs before handing off.
 
 Keep scaffolding minimal — just enough for the coder to start on build step one.
-(When invoked as the build phase of the main `project-setup` skill, the project
-is already scaffolded, deployed, and past design exploration — always skip this.)
+When an external bootstrap process has already scaffolded the project, always
+skip this step.
 
 ### 4. Coder — implement the plan and the design
 Launch the `coder` agent with the **paths** `docs/plan.md` and

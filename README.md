@@ -5,6 +5,9 @@ non-trivial change through **architect → designer → coder → tester → man
 and keeps every handoff on disk, so later stages do not depend on hidden chat
 context.
 
+This package deliberately covers the build-and-review phase. Start it in an
+existing project; project bootstrapping and deployment are not bundled.
+
 ## What it does
 
 | Role | Responsibility | Required artifact |
