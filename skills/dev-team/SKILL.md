@@ -6,11 +6,10 @@ description: >
   properly" request where the user wants the whole team involved rather than a
   one-shot answer. Trigger on "run the dev team on this", "build this with the
   team", "kick off the dev team", "have the team implement X", or "take this
-  feature through architect → designer → coder → tester → manager". Also trigger
-  on the German equivalents: "bau das mit dem Team", "lass das Team ran", "mach
-  das mit dem Dev-Team", "schick das durch das Team". For starting
-  a BRAND-NEW project from scratch, bootstrap it first (folder, git, deploy
-  target) and then run this skill as the build phase.
+  feature through architect → designer → coder → tester → manager". For starting
+  a BRAND-NEW project from scratch (local folder + GitHub + Vercel + design),
+  use the main `project-setup` skill instead — it bootstraps and deploys first,
+  then runs this same team as its build phase.
 metadata:
   version: "0.2.0"
   author: "Phil (Brains & Pixels)"
@@ -30,11 +29,10 @@ Trigger when the user wants the whole team involved on an **existing** project �
 a new feature, a non-trivial change, or a "build this properly" request — rather
 than a one-shot answer. For a tiny tweak, skip the ceremony and just do it.
 
-**New project from scratch?** This skill assumes something already exists. For a
-greenfield project, bootstrap it first (folder, git, deploy target, any design
-exploration) and then run this skill as the build phase. If a `project-setup`
-skill is installed, it does that bootstrap and invokes this team itself — that is
-a separate skill and does not ship with this plugin.
+**New project from scratch?** Use the main `project-setup` skill instead. It
+handles the local folder + GitHub + Vercel bootstrap, gets the project live, runs
+the design-exploration phase, and then invokes this same team as its build phase —
+so you don't run this skill directly for a greenfield project.
 
 ## The pipeline
 
@@ -76,8 +74,8 @@ scaffold when you're genuinely starting from an empty directory:
 - Confirm the empty skeleton builds/runs before handing off.
 
 Keep scaffolding minimal — just enough for the coder to start on build step one.
-(When invoked as the build phase of a bootstrap skill, the project is already
-scaffolded, deployed, and past design exploration — always skip this.)
+(When invoked as the build phase of the main `project-setup` skill, the project
+is already scaffolded, deployed, and past design exploration — always skip this.)
 
 ### 4. Coder — implement the plan and the design
 Launch the `coder` agent with the **paths** `docs/plan.md` and
