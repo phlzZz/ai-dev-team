@@ -1,6 +1,8 @@
 ---
 name: dev-team
 description: Run the AI Dev Team's architect-to-manager workflow for a non-trivial change in an existing project.
+metadata:
+  version: "0.3.2"
 ---
 
 # AI Dev Team for Codex
@@ -33,6 +35,12 @@ the smallest appropriate path instead.
 6. The Manager reviews the plan, design handoff, code, and test results; it
    returns a specific go/no-go verdict and lists blockers separately from
    accepted follow-ups.
+7. For user-visible work, the Tester or Manager must verify the rendered page
+   at desktop and narrow-mobile widths, exercise the key interaction, and save
+   named evidence under `docs/evidence/`. Give each browser surface a bounded
+   attempt. If the first surface fails or stalls, use one alternative surface;
+   if neither produces evidence, record the exact failure and return **NO-GO**
+   rather than waiting indefinitely or treating source review as visual proof.
 
 ## Role references
 

@@ -61,6 +61,15 @@ the plan and the team continues.
 - A task is not complete merely because code was written: it must be tested and
   reviewed against the plan and design handoff.
 
+## Rendered-browser release gate
+
+For every user-visible change, the workflow must save browser evidence under
+`docs/evidence/`: a desktop capture, a narrow-mobile capture, and proof that
+the key interaction works. A browser surface gets one bounded attempt; if it
+stalls, the team tries one alternative surface. If neither can produce that
+evidence, the Manager returns **NO-GO**. A green build or source-code review is
+never a substitute for a rendered check.
+
 ## Customization
 
 The team has a full-stack web bias—React, TypeScript, Tailwind, Node/serverless,

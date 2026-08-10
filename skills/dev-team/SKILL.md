@@ -10,7 +10,7 @@ description: >
   brand-new project, first create a minimal working project, then run this
   skill as the build phase.
 metadata:
-  version: "0.3.1"
+  version: "0.3.2"
   author: "Phil (Brains & Pixels)"
 ---
 
@@ -119,6 +119,12 @@ deferred with the user's agreement.
   manager's go/no-go are the two moments to check in with the user when present.
 - **Deliver as you go.** Share the plan when it's ready and the working result
   when it passes, rather than only at the very end.
+- **Rendered evidence is a release gate.** For user-visible work, capture the
+  implemented page at desktop and narrow-mobile widths, exercise the key
+  interaction, and save named evidence under `docs/evidence/`. Give one browser
+  surface a bounded attempt, then use one alternative if it stalls. If neither
+  produces evidence, record the exact failure and return **NO-GO**; source
+  review and a green build are not visual proof.
 - **Don't let roles blur.** The coder doesn't redesign, the tester doesn't
   rubber-stamp, the manager doesn't rewrite. If a stage is blocked, stop and say
   so instead of having one agent quietly do another's job.
