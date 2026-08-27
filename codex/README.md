@@ -1,15 +1,18 @@
 # Codex installation
 
-Copy `codex/skills/dev-team/` into your Codex skills directory, then start a
-new Codex task in the project you want to change. Ask: “run the AI Dev Team on
-this feature.”
+Copy `codex/skills/dev-team/` into your Codex skills directory, preserving its
+`references/` subdirectory, then start a new Codex task in the existing project
+you want to change.
 
-The skill uses the same five roles and disk-based handoffs as the Claude Code
-release. It uses Codex's available delegated-agent capability when present and
-otherwise keeps the same stages sequentially in one task, reporting that
-fallback at the end.
+Ask Codex to run the Dev Team on the change. The skill reads each bundled role
+contract before its stage and uses delegated agents when that capability is
+available. If delegation is unavailable, it preserves the same persisted
+stages sequentially and reports the fallback.
 
-For user-visible work, the final report is only a GO when `docs/evidence/`
-contains desktop and narrow-mobile captures plus the checked key interaction.
-If the first browser surface stalls, the workflow tries one alternative. No
-rendered evidence means NO-GO, even if automated checks pass.
+The workflow requires named on-disk handoffs, one stateful-gate owner, one
+integrator, no more than three repair cycles, and exactly one authoritative
+full gate after the final repair. Project-specific acceptance criteria and
+rendered evidence remain defined by the project.
+
+Restart Codex or open a new task after installing or replacing the skill so the
+new instructions are loaded.
