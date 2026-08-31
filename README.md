@@ -27,6 +27,10 @@ plan explicitly marks the scope as headless or API-only.
 - One named integrator owns integration.
 - Repair cycles are capped at three.
 - Exactly one authoritative full gate runs after the final repair.
+- User-visible work has a mandatory accessibility gate. Web surfaces target the
+  applicable WCAG 2.2 AA criteria and require both repository-native automated
+  analysis and manual keyboard, focus, semantics, form/error, contrast, and
+  200% zoom/reflow evidence; automation alone cannot pass the gate.
 - Commit, push, publish, and installation remain separate human authorization gates.
 
 Project-specific acceptance criteria stay in the project. For user-visible
